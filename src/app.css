@@ -26,7 +26,7 @@ ol, ul {
 .board-row:after {
   clear: both;
   content: "";
-  display: table;
+  /*display: table;*/
 }
 
 .status {
@@ -41,12 +41,12 @@ ol, ul {
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 90px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 90px;
 }
 
 .square:focus {
@@ -58,10 +58,25 @@ ol, ul {
 }
 
 .game {
+
+}
+
+.game-board {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .game-info {
-  margin-left: 20px;
+  justify-content: center;
+}
+
+.draw {
+  font-weight: bold;
+  color: yellow;
+}
+
+.winner {
+  font-weight: bold;
+  color: green;
 }
