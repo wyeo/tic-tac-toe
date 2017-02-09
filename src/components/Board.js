@@ -1,14 +1,14 @@
 import React from 'react'
 import Square from './Square'
-import Status from './Status'
-import calculateWinner from '../calculateWinner'
 
 class Board extends React.Component {
 
   renderSquare(i) {
+    const squares = this.props.squares.squares[i]
+
     return (
       <Square
-        value={this.props.squares.squares[i]}
+        value={squares}
         onClick={() => this.props.onClick(i)}
       />
     )
@@ -35,6 +35,11 @@ class Board extends React.Component {
       </div>
     )
   }
+}
+
+Board.propTypes = {
+  squares: React.PropTypes.object.isRequired,
+  onClick: React.PropTypes.func.isRequired,
 }
 
 module.exports = Board
