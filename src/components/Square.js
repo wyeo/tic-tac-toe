@@ -6,4 +6,9 @@ const Square = ({value, onClick}) => (
   </button>
 )
 
+Square.propTypes = {
+  value: React.PropTypes.string,
+  onClick: React.PropTypes.func.isRequired,
+}
+
 module.exports = Square
