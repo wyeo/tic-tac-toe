@@ -4,24 +4,27 @@ module.exports = {
   context: __dirname,
   entry: './src/app.js',
   output: {
-    path: __dirname + "./bin",
-    filename: "app.output.js",
-    publicPath: "/bin/"
+    path: `${__dirname} ./bin`,
+    filename: 'app.output.js',
+    publicPath: '/bin/',
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
   },
   module: {
     loaders: [
       {
-        test:     /\.js$/,
-        exclude:  /node_modules/,
-        loader:   'babel-loader',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
       },
       {
-        test:     /\.css$/,
-        loaders:   ["style", "css-loader"],
-      }
-    ]
+        test: /\.css$/,
+        loaders: ['style', 'css-loader'],
+      },
+    ],
   },
   plugins: [
-    new OpenBrowserPlugin({ url: 'http://localhost:8080' })
-  ]
+    new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
+  ],
 }

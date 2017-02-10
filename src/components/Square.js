@@ -6,8 +6,12 @@ const Square = ({ value, onClick }) => (
   </button>
 )
 
+Square.defaultProps = {
+  value: '',
+}
+
 Square.propTypes = {
-  value: React.PropTypes.string.isRequired,
+  value: React.PropTypes.string,
   onClick: React.PropTypes.func.isRequired,
 }
 

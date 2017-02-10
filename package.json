@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "webpack-dev-server --hot --inline --content-base ./"
+    "start": "eslint src/**.js && webpack-dev-server --hot --inline --content-base ./",
+    "start-fast": "webpack-dev-server --hot --inline --content-base ./"
   },
   "repository": {
     "type": "git",
