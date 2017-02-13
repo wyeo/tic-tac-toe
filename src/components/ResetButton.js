@@ -1,9 +1,23 @@
 import React from 'react'
 
-const ResetButton = () => <button>Reset</button>
+class ResetButton extends React.Component {
+
+  handleClick() {
+    const { initSquare, initPlayer } = this.props.initGame
+    initPlayer()
+    initSquare()
+  }
+
+  render() {
+    return <button onClick={() => this.handleClick()}>Reset</button>
+  }
+}
 
 ResetButton.propTypes = {
-  squares: React.PropTypes.array.isRequired,
+  initGame: React.PropTypes.shape({
+    initSquare: React.PropTypes.func.isRequired,
+    initPlayer: React.PropTypes.func.isRequired,
+  }).isRequired,
 }
 
 module.exports = ResetButton

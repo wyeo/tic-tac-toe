@@ -1,7 +1,7 @@
 import React from 'react'
 import calculateWinner from '../calculateWinner'
 
-const StatusContainer = ({ squares, xState }) => {
+const StatusContainer = ({ squares, currentPlayer }) => {
   let status
   let state
   const winner = calculateWinner(squares)
@@ -13,14 +13,18 @@ const StatusContainer = ({ squares, xState }) => {
     status = `Winner is : ${winner}`
     state = 'winner'
   } else {
-    status = `Next player: ${(xState ? 'X' : 'O')}`
+    status = currentPlayer
   }
   return <div className={state}>{status}</div>
 }
 
+StatusContainer.defaultProps = {
+  currentPlayer: '',
+}
+
 StatusContainer.propTypes = {
   squares: React.PropTypes.array.isRequired,
-  xState: React.PropTypes.bool.isRequired,
+  currentPlayer: React.PropTypes.string,
 }
 
 module.exports = StatusContainer

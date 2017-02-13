@@ -8,21 +8,13 @@
     "start": "eslint src/**.js && webpack-dev-server --hot --inline --content-base ./",
     "start-fast": "webpack-dev-server --hot --inline --content-base ./"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wyeo/tutoBadi.git"
-  },
-  "author": "",
+  "author": "wyeo",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wyeo/tutoBadi/issues"
-  },
-  "homepage": "https://github.com/wyeo/tutoBadi#readme",
   "dependencies": {
     "babel-eslint": "^7.1.1",
     "react": "^15.3.2",
-    "react-addons-transition-group": "^15.4.2",
     "react-dom": "^15.3.2",
+    "react-redux": "^5.0.2",
     "redux": "^3.6.0"
   },
   "devDependencies": {

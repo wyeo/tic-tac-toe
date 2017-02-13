@@ -1,14 +1,16 @@
 {
   "extends": "airbnb",
   "globals": {
+    "window": true,
     "document": true,
+	"expect": true,
     "test": true,
-    "expect": true,
   },
   "parser": "babel-eslint",
   "rules": {
     "comma-dangle": 1,
     "semi": 0,
+    "camelcase": 2,
     "no-unneeded-ternary": 0,
     "react/forbid-prop-types": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],

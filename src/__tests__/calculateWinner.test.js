@@ -1,4 +1,4 @@
-const calculateWinner = require('./calculateWinner')
+const calculateWinner = require('../calculateWinner')
 
 test('DRAW!', () => {
   expect(calculateWinner([
