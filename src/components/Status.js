@@ -13,7 +13,7 @@ const StatusContainer = ({ squares, currentPlayer }) => {
     status = `Winner is : ${winner}`
     state = 'winner'
   } else {
-    status = currentPlayer
+    status = `Next player : ${currentPlayer}`
   }
   return <div className={state}>{status}</div>
 }
@@ -24,7 +24,7 @@ StatusContainer.defaultProps = {
 
 StatusContainer.propTypes = {
   squares: React.PropTypes.array.isRequired,
-  currentPlayer: React.PropTypes.string,
+  currentPlayer: React.PropTypes.string.isRequired,
 }
 
 module.exports = StatusContainer

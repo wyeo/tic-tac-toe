@@ -22,17 +22,11 @@ const changePlayer = (state = '', action) => {
     case 'INITIALIZE_PLAYER':
       return 'X'
     case 'CHANGE_PLAYER':
-      return action.currentPlayer
+      return action.currentPlayer === 'X' ? 'O' : 'X'
     default:
       return state
   }
 }
 
-const associateReducers = (state = {}, action) => ({
-  squares: changeSquares(state.squares, action),
-  currentPlayer: changePlayer(state.currentPlayer, action),
-})
-
-module.exports.associateReducers = associateReducers
 module.exports.changeSquares = changeSquares
 module.exports.changePlayer = changePlayer

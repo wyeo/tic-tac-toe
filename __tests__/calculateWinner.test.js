@@ -1,73 +1,73 @@
-const calculateWinner = require('../calculateWinner')
+const calculateWinner = require('../src/calculateWinner')
 
 test('DRAW!', () => {
   expect(calculateWinner([
     'X', 'O', 'X',
     'O', 'O', 'X',
     'O', 'X', 'O',
-  ])).toBe(null)
+  ])).toMatchSnapshot()
 })
 
-test('', () => {
+test('X is Winner', () => {
   expect(calculateWinner([
     'X', 'X', 'X',
     '', '', '',
     '', '', '',
-  ])).toBe('X')
+  ])).toMatchSnapshot()
 })
 
-test('', () => {
+test('X is Winner', () => {
   expect(calculateWinner([
     'X', '', '',
     'X', '', '',
     'X', '', '',
-  ])).toBe('X')
+  ])).toMatchSnapshot()
 })
 
-test('', () => {
+test('X is Winner', () => {
   expect(calculateWinner([
     '', '', 'X',
     '', '', 'X',
     '', '', 'X',
-  ])).toBe('X')
+  ])).toMatchSnapshot()
 })
 
-test('', () => {
+test('X is Winner', () => {
   expect(calculateWinner([
     '', '', '',
     '', '', '',
     'X', 'X', 'X',
-  ])).toBe('X')
+  ])).toMatchSnapshot()
 })
 
-test('', () => {
+test('X is Winner', () => {
   expect(calculateWinner([
     'X', '', '',
     '', 'X', '',
     '', '', 'X',
-  ])).toBe('X')
+  ])).toMatchSnapshot()
 })
 
-test('', () => {
+test('X is Winner', () => {
   expect(calculateWinner([
     '', 'X', '',
     '', 'X', '',
     '', 'X', '',
-  ])).toBe('X')
+  ])).toMatchSnapshot()
 })
 
-test('', () => {
+test('X is Winner', () => {
   expect(calculateWinner([
     '', '', 'X',
     '', 'X', '',
     'X', '', '',
-  ])).toBe('X')
+  ])).toMatchSnapshot()
 })
 
-test('', () => {
+test('X is Winner', () => {
   expect(calculateWinner([
     '', '', '',
     'X', 'X', 'X',
     '', '', '',
-  ])).toBe('X')
+  ])).toMatchSnapshot()
 })

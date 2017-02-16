@@ -1,0 +1,26 @@
+exports[`ACTIONS Should create an action to add square 1`] = `
+Object {
+  "index": 1,
+  "symbol": "X",
+  "type": "ADD_SQUARE",
+}
+`;
+
+exports[`ACTIONS Should create an action to change player 1`] = `
+Object {
+  "currentPlayer": "X",
+  "type": "CHANGE_PLAYER",
+}
+`;
+
+exports[`ACTIONS Should create an action to initialize player 1`] = `
+Object {
+  "type": "INITIALIZE_PLAYER",
+}
+`;
+
+exports[`ACTIONS Should create an action to initialize squares 1`] = `
+Object {
+  "type": "INITIALIZE_SQUARES",
+}
+`;

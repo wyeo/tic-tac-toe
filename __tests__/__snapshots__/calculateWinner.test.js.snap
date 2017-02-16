@@ -1,0 +1,17 @@
+exports[`test DRAW! 1`] = `null`;
+
+exports[`test X is Winner 1`] = `"X"`;
+
+exports[`test X is Winner 2`] = `"X"`;
+
+exports[`test X is Winner 3`] = `"X"`;
+
+exports[`test X is Winner 4`] = `"X"`;
+
+exports[`test X is Winner 5`] = `"X"`;
+
+exports[`test X is Winner 6`] = `"X"`;
+
+exports[`test X is Winner 7`] = `"X"`;
+
+exports[`test X is Winner 8`] = `"X"`;

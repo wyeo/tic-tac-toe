@@ -1,0 +1,35 @@
+exports[`CHANGE PLAYER REDUCER should return the initial player 1`] = `"X"`;
+
+exports[`CHANGE PLAYER REDUCER should return the initial state 1`] = `""`;
+
+exports[`CHANGE PLAYER REDUCER should return the opposite of the current player (X) 1`] = `"O"`;
+
+exports[`CHANGE SQUARE REDUCER should return the initial state 1`] = `Array []`;
+
+exports[`CHANGE SQUARE REDUCER should return the new state with square updated 1`] = `
+Array [
+  null,
+  "X",
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+]
+`;
+
+exports[`CHANGE SQUARE REDUCER should return the new state with squares initialize 1`] = `
+Array [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+]
+`;

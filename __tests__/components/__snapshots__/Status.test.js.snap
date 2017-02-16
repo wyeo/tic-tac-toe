@@ -1,0 +1,11 @@
+exports[`<Status /> Test DRAW [className + text] 1`] = `true`;
+
+exports[`<Status /> Test DRAW [className + text] 2`] = `"DRAW"`;
+
+exports[`<Status /> Test EMPTY 1`] = `true`;
+
+exports[`<Status /> Test EMPTY 2`] = `"Next player : X"`;
+
+exports[`<Status /> Test Winner [className + text] 1`] = `true`;
+
+exports[`<Status /> Test Winner [className + text] 2`] = `"Winner is : X"`;

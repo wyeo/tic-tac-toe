@@ -3,7 +3,9 @@
   "globals": {
     "window": true,
     "document": true,
-	"expect": true,
+    "describe": true,
+    "it": true,
+    "expect": true,
     "test": true,
   },
   "parser": "babel-eslint",
