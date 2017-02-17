@@ -4,9 +4,8 @@ module.exports = {
   context: __dirname,
   entry: './src/app.js',
   output: {
-    path: `${__dirname} ./bin`,
+    path: __dirname + '/bin',
     filename: 'app.output.js',
-    publicPath: '/bin/',
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],

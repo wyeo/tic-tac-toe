@@ -6,8 +6,9 @@
   "scripts": {
     "test": "jest",
     "test:watch": "npm test -- --watch",
-    "start": "eslint src/**.js && webpack-dev-server --hot --inline --content-base ./",
-    "start-fast": "webpack-dev-server --hot --inline --content-base ./"
+    "build": "webpack",
+    "start": "eslint src/**.js && npm run build && webpack-dev-server --hot --inline --content-base ./",
+    "start-fast": "npm run build && webpack-dev-server --hot --inline --content-base ./"
   },
   "author": "wyeo",
   "license": "ISC",
