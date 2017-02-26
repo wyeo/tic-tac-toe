@@ -1,9 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { combineReducers } from 'redux'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
+import createLogger from 'redux-logger'
 import Game from './components/Game'
-import { createStore } from './store/createStore'
+// import { createStore } from './store/createStore'
+
 import {
   changeSquares,
   changePlayer,
@@ -14,7 +16,19 @@ const finalReducer = combineReducers({
   currentPlayer: changePlayer,
 })
 
-const store = createStore(finalReducer)
+const configureStore = () => {
+  const middlewares = []
+  if (process.env.NODE_ENV !== 'production') {
+    middlewares.push(createLogger())
+  }
+
+  return createStore(
+    finalReducer,
+    applyMiddleware(...middlewares),
+  )
+}
+
+const store = configureStore()
 
 ReactDOM.render(
   <Provider store={store}>
