@@ -2,13 +2,10 @@ import React from 'react'
 import Square from './Square'
 
 class Board extends React.Component {
-
   renderSquare(i) {
-    const square = this.props.squares[i]
-
     return (
       <Square
-        value={square}
+        value={this.props.squares[i]}
         onClick={() => this.props.onClick(i)}
       />
     )

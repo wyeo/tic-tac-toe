@@ -11,9 +11,9 @@ import {
 } from '../actions/index'
 import calculateWinner from '../calculateWinner'
 
-const mapStateToProps = state => ({
-  squares: state.squares,
-  currentPlayer: state.currentPlayer,
+const mapStateToProps = ({ squares, currentPlayer }) => ({
+  squares,
+  currentPlayer,
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -40,7 +40,7 @@ class GameP extends React.Component {
   }
 
   render() {
-    const { squares, currentPlayer } = this.props
+    const { squares, currentPlayer, initPlayer, initSquare } = this.props
     return (
       <div className="game">
         <div className="game-board">
@@ -55,7 +55,10 @@ class GameP extends React.Component {
             currentPlayer={currentPlayer}
           />
         </div>
-        <ResetButton initGame={this.props} />
+        <ResetButton
+          initPlayer={initPlayer}
+          initSquare={initSquare}
+        />
       </div>
     )
   }

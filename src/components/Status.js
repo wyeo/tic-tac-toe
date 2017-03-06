@@ -2,20 +2,15 @@ import React from 'react'
 import calculateWinner from '../calculateWinner'
 
 const StatusContainer = ({ squares, currentPlayer }) => {
-  let status
-  let state
   const winner = calculateWinner(squares)
 
-  if (squares.filter(x => x !== 'X' && x !== 'O').length === 0) {
-    status = 'DRAW'
-    state = 'draw'
-  } else if (winner) {
-    status = `Winner is : ${winner}`
-    state = 'winner'
-  } else {
-    status = `Next player : ${currentPlayer}`
+  if (winner) {
+    return <div className={'winner'}>{`Winner is : ${winner}`}</div>
   }
-  return <div className={state}>{status}</div>
+  if (squares.filter(x => x !== 'X' && x !== 'O').length === 0) {
+    return <div className={'draw'}>DRAW</div>
+  }
+  return <div>{`Next player : ${currentPlayer}`}</div>
 }
 
 StatusContainer.defaultProps = {
