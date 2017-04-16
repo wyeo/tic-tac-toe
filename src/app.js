@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 import Game from './components/Game'
-import { createStore } from './store/createStore'
+import { createStore, combineReducers } from './store/willux'
 import { changeSquares, changePlayer } from './reducers/index'
 
 const finalReducer = combineReducers({
